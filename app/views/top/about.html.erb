@@ -1,0 +1,62 @@
+<h1>Top#About</h1>
+
+<!-- 名前欄 -->
+<!-- <p>Name:
+<input type="text" name="name" ng-model="user.name" required ng-minlength="5" ng-maxlength="10">
+<span ng-show="myForm.name.$error.required">Required!</span>
+<span ng-show="myForm.name.$error.minlength">Warning!! Too Short!</span>
+<span ng-show="myForm.name.$error.maxlength">Warning!! Too Long!</span>
+</p> -->
+<!-- 名前欄 -->
+
+
+<!-- 性別と+18 -->
+<p>18+<input type="checkbox" ng-model="user.adult" ng-true-value="adult" ng-false-value="child">  Gender:<input type="radio" ng-model="user.gender" value="'male'">male | <input type="radio" ng-model="user.gender" value="'female'">female</p>
+<p>Score:
+<input type="number" name="score" ng-model="user.score">
+</p>
+<!-- 性別と+18 -->
+
+<!-- E-mail -->
+<p>email:
+<input type="email" name="email" ng-model="user.email">
+<span ng-show="myForm.email.$error.email">Not valid e-mail!</span>
+</p>
+<!-- E-mail -->
+
+
+<!-- Web Site -->
+<p>Web:
+<input type="url" name="url" ng-model="user.url">
+<span ng-show="myForm.url.$error.url">Not valid web site url!</span>
+</p>
+<!-- Web Site -->
+
+<!-- adless Area -->
+<!--
+<textarea name="datas" ng-model="user.datas" ng-options="val0 for data in datas"> </textarea>
+<p>{{datas}}</p>
+-->
+<!-- adless Area -->
+
+<!-- text area -->
+<p>
+  <textarea name="memo" ng-model="user.memo" ng-maxlength="140"></textarea>
+  <span ng-hide="myForm.memo.$error.maxlength">{{140 - user.memo.length}}</span>
+  <span ng-show="myForm.memo.$error.maxlength">Over Write!</span>
+  <span></span>
+</p>
+<!-- text area -->
+
+<!-- colors select box area -->
+<p>Color:<select ng-model="user.color" ng-options="color for color in colors" ></select></p>
+<!-- colors select box area -->
+
+<p><input type="text" calss="sapn2" ng-model="search" placeholder="検索キーワードを入力" class="ng-pristine ng-valid"></p>
+<p ng-show="myForm.url.$error.datas">{{datas}}</p>
+<!--
+<p>Adless:<select ng-model="user.data" ng-options="data for data in datas" ></select></p>
+-->
+<p><input type="submit" value="add"></p>
+
+<h1> {{user.name}} </h1>
