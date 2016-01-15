@@ -1,6 +1,6 @@
 <h1>Top#index</h1>
 <p>Name:
-
+<br>
 <input type="text" name="name" ng-model="user.name" required ng-minlength="5" ng-maxlength="10">
 <br>
 <span ng-show="myForm.name.$error.required">Required!</span>
@@ -10,9 +10,11 @@
 </p>
 
 
-<p>Region of Japan:<select ng-model="user.region" ng-options="region for region in regions" ></select></p>
+<p>Region of Japan:
+<br><select ng-model="user.region" ng-change="selectRegion()" ng-options="region for region in regions" ></select></p>
 
-<p>Prefecture of Japan:<select ng-model="user.prefecture" ng-options="prefecture for prefecture in prefectures" ></select></p>
+<p>Prefecture of Japan:
+<br><select ng-model="user.prefecture" ng-options="prefecture for prefecture in prefectures" ></select></p>
 
 <%= link_to 'りんく', about_path %>
 <!--
