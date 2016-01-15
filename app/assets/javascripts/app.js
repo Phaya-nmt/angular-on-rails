@@ -19,15 +19,20 @@ app.controller('mainCtrl', function ($scope, $firebaseArray) {
   }
   // 以下にドロップダウンのリスト
   $scope.regions = ['北海道',
-                        '東北',
-                        '関東',
-                        '中具',
-                        '近畿',
-                        '中国',
-                        '四国',
-                        '九州',
+                    '東北',
+                    '関東',
+                    '中具',
+                    '近畿',
+                    '中国',
+                    '四国',
+                    '九州',
   ];
   $scope.prefectures = ['red',
                         'blue',
   ];
+  $scope.users = $firebaseArray(ref.orderByChild('gender')
+    .equalTo('male'));
 });
+// app.controller('firebaseCtrl', function($scope, $firebaseArray) {
+//   var ref new Firebase('https://adanana.firebaseio.com/');
+// });
